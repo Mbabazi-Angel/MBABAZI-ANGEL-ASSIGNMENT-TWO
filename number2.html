@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label>Number:</label>
+    <input type="text" id="number" size="40"><span id="error"></span><br><br>
+    <button type="submit" onclick="errorMessage()">Submit</button>
+</body>
+<script>
+    function errorMessage() {
+        var error = document.getElementById("error")
+        if (isNaN(document.getElementById("number").value)) 
+        {
+ 
+            // Displaying error message
+            error.innerHTML = "<span style='color: red;'>"+
+                        "Please enter a valid number</span>"
+        } else {
+            error.innerHTML = ""
+        }
+    }
+</script>
+</html>
